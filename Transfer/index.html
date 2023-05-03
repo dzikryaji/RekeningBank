@@ -1,0 +1,64 @@
+<!-- HTML C -->
+
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transfer</title>
+    <link rel="stylesheet" href="transfer.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <h1>Transfer</h1>
+      <form action="../route.php" method="POST">
+        <div class="flex flex-wrap formbold--mx-3">
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="form-input-container">
+              <label for="idPengirim" class="form-label"> ID Pengirim </label>
+              <input
+								required
+                type="text"
+                name="idPengirim"
+                id="idPengirim"
+                placeholder="ID Pengirim"
+                class="form-input"
+              />
+            </div>
+          </div>
+          <div class="w-full sm:w-half formbold-px-3">
+            <div class="form-input-container">
+              <label for="idPenerima" class="form-label"> ID Penerima </label>
+              <input
+								required
+                type="text"
+                name="idPenerima"
+                id="idPenerima"
+                placeholder="ID Penerima"
+                class="form-input"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="form-input-container">
+          <label for="nominalTransfer" class="form-label"> Nominal Transfer </label>
+          <input
+						required
+            type="number"
+            name="nominalTransfer"
+            id="nominalTransfer"
+						min="0"
+            placeholder="Rp"
+            class="form-input"
+          />
+        </div>
+
+        <div>
+          <input type="submit" value="Transfer" class="form-btn">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
